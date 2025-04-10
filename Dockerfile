@@ -1,6 +1,6 @@
 FROM httpd
 WORKDIR /html
-COPY /var/www/html/index.html .
+COPY . .
 EXPOSE 80
 CMD systemctl start httpd 
 
