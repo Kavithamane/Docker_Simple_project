@@ -1,6 +1,6 @@
-FROM python:2.7 
+FROM httpd
 WORKDIR /html
-COPY /var/www/html .
-EXPOSE 3000
-CMD python -m SimpleHTTPServer 3000
+COPY /var/www/html/index.html .
+EXPOSE 80
+CMD systemctl start httpd 
 
